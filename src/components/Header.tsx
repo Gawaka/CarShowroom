@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Container, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export function Header() {
@@ -15,20 +15,6 @@ export function Header() {
                             >
                             🚗 CarShowroom
                         </Typography>
-                        <Button
-                            variant="contained"
-                            size='small'
-                            component={Link}
-                            to="/vehicles/:vehicleId"
-                            sx={{color: 'red'}}
-                        >move</Button>
-                        <Button 
-                            size='small'
-                            variant="contained"
-                            component={Link}
-                            to="/"
-                            sx={{color: 'red'}}
-                        >back</Button>
                     </Toolbar>
             </Container>
         </AppBar>

@@ -1,4 +1,3 @@
-import { Form, Field } from 'react-final-form';
 
 export const required = (value?: string): string | undefined => {
     return value && value.trim().length > 0 ? undefined : "Це поле є обов'язковим";
