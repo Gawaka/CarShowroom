@@ -1,75 +1,37 @@
-# React + TypeScript + Vite
+# 🚗 Car Showroom SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Тестове завдання з реалізації веб-застосунку автосалону з каталогом, детальною інформацією про авто.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+[...]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Стек технологій
+- **Core:** React 19, TypeScript, Vite
+- **Routing:** React Router v7
+- **Server State & Caching:** TanStack Query (React Query)
+- **Forms & Validation:** React Final Form
+- **UI & Layout:** Material-UI (MUI), Mobile-first верстка (420px – 1440px)
+- **HTTP Client:** Axios
+- **Data Persistence:** Hybrid comments model (API + Browser `localStorage`)
 
-## React Compiler
+## 🚀 Основний функціонал
+1. **Каталог автомобілів:** Отримання списку авто через DummyJSON API.
+2. **Фільтрація та сортування:** Пошук за назвою та брендом, сортування по ціні.
+3. **Детальна сторінка автомобіля:** Характеристики, коментарі і відгуки з можливістю додавання власних, динамічний роутинг.
+4. **Система відгуків:** Об'єднання  відгуків з API та нових користувацьких коментарів, збережених у `localStorage`.
+5. **Валідація форм:** Перевірка обов'язкових полів та обмеження довжини тексту.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦💻 Встановлення та запуск
 
-## Expanding the ESLint configuration
+```bash
+# Встановлення залежностей
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Запуск локального сервера розробки
+npm run dev
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Збірка проєкту для продакшену
+npm run build
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+# Попередній перегляд продакшен-збірки
+npm run preview
